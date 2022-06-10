@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Slidebar from '../../components/slidebar';
+import Login from '../auth/login';
 import Favourite from '../favourite/favourite';
 import Feed from '../feed/feed';
 import Library from '../library/library';
@@ -11,9 +12,13 @@ import './home.css';
 
 const home = () => {
     return (
+        
         <Router>
+
         <div className="main-body">
-        <Slidebar></Slidebar>
+        <Login />
+
+        {/* <Slidebar></Slidebar>
 
             <Routes>
                 <Route path="/" element={<Library></Library>}></Route>
@@ -23,7 +28,7 @@ const home = () => {
                 <Route path='/favourite' element={<Favourite></Favourite>}></Route>
                 <Route path="/library" element={<Library></Library>}></Route>
 
-            </Routes>
+            </Routes> */}
         </div>
         </Router>
     );
