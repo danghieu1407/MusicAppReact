@@ -18,7 +18,7 @@ export default function Slidebar()  {
 
     useEffect(()=>{
         apiClient.get("me").then((reponse) =>{
-            console.log(reponse);
+            console.log(reponse.data.images[0].url);
         });
         },[])
         
